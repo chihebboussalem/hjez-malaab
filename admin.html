@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>لوحة تحكم — حجز الملعب البلدي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<div class="container admin-container">
+
+  <header class="hero hero-admin">
+    <div class="hero-overlay hero-overlay-solid"></div>
+    <div class="hero-content">
+      <p class="eyebrow">الملعب البلدي</p>
+      <h1>لوحة تحكم الحجوزات</h1>
+      <p class="subtitle">إدارة حجوزات الملعب البلدي</p>
+    </div>
+  </header>
+
+  <!-- ===== شاشة تسجيل الدخول ===== -->
+  <div class="login-box" id="loginBox">
+    <label for="adminPassword">كلمة السر</label>
+    <input type="password" id="adminPassword" placeholder="أدخل كلمة السر">
+    <button class="submit-btn" onclick="login()">دخول</button>
+    <p class="error-msg" id="loginError"></p>
+  </div>
+
+  <!-- ===== لوحة الحجوزات (تظهر بعد تسجيل الدخول) ===== -->
+  <div class="admin-panel" id="adminPanel">
+    <div class="panel-header">
+      <span id="bookingsCount"></span>
+      <button class="refresh-btn" onclick="loadBookings()">تحديث</button>
+    </div>
+
+    <table class="bookings-table">
+      <thead>
+        <tr>
+          <th>اليوم</th>
+          <th>الساعة</th>
+          <th>الاسم</th>
+          <th>الهاتف</th>
+          <th>الدفع</th>
+          <th>الكود</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="bookingsBody"></tbody>
+    </table>
+
+    <p class="empty-msg" id="emptyMsg">ماكاش حجوزات حالياً</p>
+  </div>
+
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+.admin-container {
+  max-width: 800px;
+}
+
+/* بانر أبسط لصفحة الإدارة (بلا رسمة الملعب، تدرج لوني فقط) */
+.hero-admin {
+  height: 140px;
+}
+
+.hero-overlay-solid {
+  background: linear-gradient(135deg, var(--pitch-green) 0%, var(--pitch-green-deep) 100%);
+}
+
+/* كل الأقسام تحت البانر تاخذ نفس الهوامش الجانبية */
+.login-box,
+.panel-header,
+.bookings-table,
+.empty-msg {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* ================= شاشة الدخول ================= */
+.login-box {
+  max-width: 280px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-box input {
+  text-align: center;
+}
+
+.error-msg {
+  color: var(--cardinal);
+  font-size: 13px;
+  text-align: center;
+  min-height: 18px;
+}
+
+/* ================= اللوحة (مخفية حتى تسجيل الدخول) ================= */
+.admin-panel {
+  display: none;
+  padding-bottom: 22px;
+}
+
+.admin-panel.visible {
+  display: block;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 14px;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+.refresh-btn {
+  padding: 8px 16px;
+  background: var(--chalk);
+  color: var(--pitch-green-deep);
+  border: 1px solid #dcdfd9;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--font-display);
+}
+
+.refresh-btn:hover {
+  border-color: var(--pitch-green);
+}
+
+/* ================= جدول الحجوزات ================= */
+.bookings-table {
+  width: calc(100% - 40px);
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.bookings-table th,
+.bookings-table td {
+  padding: 10px 8px;
+  text-align: right;
+  border-bottom: 1px solid #eee;
+}
+
+.bookings-table th {
+  background: var(--chalk);
+  color: var(--ink-soft);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.bookings-table tr:hover {
+  background: #fafafa;
+}
+
+.cancel-btn {
+  padding: 6px 12px;
+  background: #fff;
+  color: var(--cardinal);
+  border: 1px solid var(--cardinal);
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.cancel-btn:hover {
+  background: var(--cardinal);
+  color: #fff;
+}
+
+.empty-msg {
+  display: none;
+  text-align: center;
+  color: #999;
+  padding: 30px 0;
+}
